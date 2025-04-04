@@ -14,6 +14,7 @@ com\rays\pro4\Model\InventoryModel.class
 com\rays\proj4\Test\SubjectTest.class
 com\rays\proj4\Test\TimeTableTest.class
 com\rays\pro4\controller\TimetableListCtl.class
+com\rays\pro4\Bean\SupplierBean.class
 com\rays\pro4\Exception\DuplicateRecordException.class
 com\rays\pro4\Model\FacultyModel.class
 com\rays\pro4\Util\PropertyReader.class
@@ -21,13 +22,13 @@ com\rays\pro4\controller\StudentListCtl.class
 com\rays\pro4\Util\HTMLUtility.class
 com\rays\pro4\Model\MarksheetModel.class
 com\rays\pro4\Bean\BaseBean.class
+com\rays\pro4\Model\SupplierModel.class
 com\rays\proj4\Test\FacultyTest.class
 com\rays\proj4\Test\RoleTest.class
 com\rays\pro4\controller\CollegeCtl.class
 com\rays\pro4\controller\UserRegistrationCtl.class
 com\rays\pro4\controller\ORSView.class
 com\rays\pro4\controller\FacultyCtl.class
-com\rays\pro4\controller\TaskListCtl.class
 com\rays\pro4\controller\MarksheetMeritListCtl.class
 com\rays\proj4\Test\CollegeModelTest.class
 com\rays\pro4\controller\UserListCtl.class
@@ -38,6 +39,7 @@ com\rays\pro4\controller\ErrorCtl.class
 com\rays\pro4\controller\CollegeListCtl.class
 com\rays\pro4\Model\UserModel.class
 com\rays\pro4\controller\EmployeeListCtl.class
+com\rays\pro4\controller\SupplierListCtl.class
 com\rays\pro4\controller\FrontControler.class
 com\rays\pro4\controller\LoginCtl.class
 com\rays\pro4\controller\EmployeeCtl.class
@@ -46,6 +48,7 @@ com\rays\pro4\Util\DataUtility.class
 com\rays\pro4\controller\InventoryCtl.class
 com\rays\pro4\controller\InventoryListCtl.class
 com\rays\pro4\controller\CourseListCtl.class
+com\rays\pro4\controller\SupplierCtl.class
 com\rays\pro4\Model\CollegeModel.class
 com\rays\pro4\controller\SubjectListCtl.class
 com\rays\pro4\Bean\CourseBean.class
