@@ -1,3 +1,4 @@
+
  package com.rays.pro4.Util;
 
 import java.util.Collections;
@@ -15,17 +16,11 @@ import com.rays.pro4.Model.BaseModel;
 /**
  *  HTML Utility class to produce HTML contents like Dropdown List.
  *  
- * @author Avnish Upadhyay
+ * @author Prince Bharti
  *
  */
 public class HTMLUtility {
 
-	/**
-	 * @param name
-	 * @param selectedVal
-	 * @param map
-	 * @return
-	 */
 	public static String getList(String name, String selectedVal,
             HashMap<String, String> map) {
 
@@ -99,7 +94,7 @@ public class HTMLUtility {
  public static String getList2(String name, String selectedVal, Map<Integer, String> map) {
 
 		StringBuffer sb = new StringBuffer(
-				"<select style='width: 202px;  height: 22px;' class='form-control' name='" + name + "'>");
+				"<select style='width: 211px;  height: 23px;' class='form-control' name='" + name + "'>");
 
 		Set<Integer> keys = map.keySet();
 		String val = null;
@@ -108,7 +103,7 @@ public class HTMLUtility {
 
 			// Add placeholder option
 			sb.append(
-					"<option style='width: 202px;  height: 22px;' selected value=''>--------------Select---------------------</option>");
+					"<option style='width: 211px;  height: 30px;' selected value=''>-------------------Select------------------</option>");
 		}
 
 		for (Integer key : keys) {
@@ -131,6 +126,9 @@ public class HTMLUtility {
 
 		return sb.toString();
 	}
+
+
+
     /**
      * Returns Error Message with HTML tag and CSS
      *
