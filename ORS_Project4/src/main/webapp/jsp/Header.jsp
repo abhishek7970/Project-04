@@ -89,9 +89,7 @@
 					href="<%=ORSView.FACULTY_CTL%>">Add Faculty</b></a> | <a
 					href="<%=ORSView.FACULTY_LIST_CTL%>">Faculty List</b></a> | <a
 					href="<%=ORSView.TIMETABLE_CTL%>">Add TimeTable</b></a> | <a
-					href="<%=ORSView.TIMETABLE_LIST_CTL%>">TimeTable List</b></a> | <a
-					href="<%=ORSView.SUPPLIER_CTL%>"> Add Supplier</a> | <a
-					href="<%=ORSView.SUPPLIER_LIST_CTL%>">Supplier List</a> | <a
+					href="<%=ORSView.TIMETABLE_LIST_CTL%>">TimeTable List</b></a> |  <a
 					href="<%=ORSView.CUSTOMER_CTL%>">Add Customer</b></a> | <a
 					href="<%=ORSView.CUSTOMER_LIST_CTL%>">Customer List</b></a> |<a
 
