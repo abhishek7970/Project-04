@@ -48,7 +48,7 @@
 		<center>
 
 			<div align="center">
-				<h1>Customer List </h1>
+				<h1>Customer List</h1>
 				<h3>
 					<font color="red"><%=ServletUtility.getErrorMessage(request)%></font>
 					<font color="limegreen"><%=ServletUtility.getSuccessMessage(request)%></font>
@@ -85,25 +85,21 @@
 						value="<%=ServletUtility.getParameter("clientName", request)%>">
 
 						<label></font> </label> <%-- <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist) %> --%>
-						
 					<td align="center"><label>Location </font> :
 					</label> <input type="text" name="location" placeholder="Enter location "
 						value="<%=ServletUtility.getParameter("location ", request)%>">
-						
-						
 					<td align="center"><label>ContactNumber</font> :
 					</label> <input type="text" name="contactNumber"
 						placeholder="Enter contactNumber"
 						value="<%=ServletUtility.getParameter("contactNumber", request)%>">
-						
-						
 					<td align="center"><label>Importance</font> :
 
-					</label> <%	String hlist = HTMLUtility.getList2("importance", DataUtility.getStringData(bean.getImportance()), map);
+					</label> <%
+ 	String hlist = HTMLUtility.getList2("importance", DataUtility.getStringData(bean.getImportance()), map);
  %> <%=hlist%> <input type="submit" name="operation"
 						value="<%=CustomerListCtl.OP_SEARCH%>"> &nbsp; <input
-						type="submit" name="operation" value="<%=CustomerListCtl.OP_RESET%>">
-					</td>
+						type="submit" name="operation"
+						value="<%=CustomerListCtl.OP_RESET%>"></td>
 				</tr>
 			</table>
 			<br>
@@ -184,9 +180,6 @@
 
 			<input type="hidden" name="pageNo" value="<%=pageNo%>"> <input
 				type="hidden" name="pageSize" value="<%=pageSize%>">
-
-			
-		
 	</form>
 	</br>
 	</br>

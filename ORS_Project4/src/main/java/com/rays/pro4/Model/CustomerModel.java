@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 //import org.apache.log4j.Logger;
 
 import com.rays.pro4.Bean.CustomerBean;
+import com.rays.pro4.Bean.UserBean;
 import com.rays.pro4.Exception.ApplicationException;
 import com.rays.pro4.Exception.DatabaseException;
 import com.rays.pro4.Exception.DuplicateRecordException;
@@ -196,6 +197,36 @@ public class CustomerModel {
 		log.debug("Method Find By PK end");
 		return bean;
 	}
+	public CustomerBean findByContactNumber(long contactNumber) throws ApplicationException {
+		log.debug("Model FIND BY PHONE Started");
+		String sql = "SELECT * FROM CUSTOMER WHERE CONTACT_NUMBER=?";
+		CustomerBean bean = null;
+		Connection conn = null;
+		try {
+			conn = JDBCDataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setLong(1, contactNumber);
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				bean = new CustomerBean();
+				bean.setId(rs.getLong(1));
+				bean.setClientName(rs.getString(2));
+				bean.setLocation(rs.getString(3));
+				bean.setContactNumber(rs.getLong(4));
+				bean.setImportance(rs.getString(5));
+			}
+			rs.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("DataBase Exception .", e);
+			throw new ApplicationException("Exception: Exception in getting user by Login");
+		} finally {
+			JDBCDataSource.closeConnection(conn);
+		}
+		log.debug("Model findby login end");
+		return bean;
+	}
 
 	/**
 	 * Update a customer
@@ -208,6 +239,10 @@ public class CustomerModel {
 		log.debug("Model Update Start");
 		String sql = "update customer set client_name=?, location=?, contact_number=?, importance=? where id=? ";
 		Connection conn = null;
+		CustomerBean existBean = findByContactNumber(bean.getContactNumber());
+		if (existBean != null && !(existBean.getId() == bean.getId())) {
+			throw new DuplicateRecordException("Contact Number is Already Exist");
+		}
 
 		try {
 			conn = JDBCDataSource.getConnection();

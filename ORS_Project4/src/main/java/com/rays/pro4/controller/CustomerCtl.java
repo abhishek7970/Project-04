@@ -225,7 +225,7 @@ public class CustomerCtl extends BaseCtl {
 			} catch (DuplicateRecordException e) {
 				System.out.println(" U ctl D post 4444444");
 				ServletUtility.setBean(bean, request);
-				ServletUtility.setErrorMessage("Login id already exists", request);
+				ServletUtility.setErrorMessage("Contact Number already exists", request);
 			}
 		} else if (OP_DELETE.equalsIgnoreCase(op)) {
 			System.out.println(" U ctl D p 5555555");
